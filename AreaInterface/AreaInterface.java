@@ -1,13 +1,13 @@
 import java.util.Scanner;
 interface Shape{
-	public void getter();
+	public void get();
 	public void area();
 	public void perimeter();
 }
 class Circle implements Shape{
 	double r,a,p;
 	Scanner sc=new Scanner(System.in);
-	public void getter(){
+	public void get(){
 		System.out.print("enter the radius of circle:");
 		r=sc.nextDouble();
 	}
@@ -23,7 +23,7 @@ class Circle implements Shape{
 class Rectangle implements Shape{
 	int l,b,p,a;
 	Scanner sc=new Scanner(System.in);
-	public void getter(){
+	public void get(){
 		System.out.println("enter the length of rectangle:");
 		l=sc.nextInt();
 		System.out.println("enter the breadth of rectangle:");
@@ -41,7 +41,7 @@ class Rectangle implements Shape{
 class Square implements Shape{
 	int s,a,p;
 	Scanner sc=new Scanner(System.in);
-	public void getter(){
+	public void get(){
 		System.out.println("enter the length of square:");
 		s=sc.nextInt();
 	}
@@ -57,7 +57,7 @@ class Square implements Shape{
 class Triangle implements Shape{
 	double a,b,c,h,p;
 	Scanner sc=new Scanner(System.in);
-	public void getter(){
+	public void get(){
 		System.out.print("enter the base of triangle:");
 		b=sc.nextDouble();
 		System.out.print("enter the height of triangle:");
@@ -88,25 +88,25 @@ public class AreaInterface {
 			System.out.print("Enter your choice:");
 			ch=sc.nextInt();
 			switch(ch){
-				case 1:	circ.getter();	
+				case 1:	circ.get();	
 					System.out.print("Area of circle:");
 					circ.area();
 					System.out.print("Perimeter of circle:");
 					circ.perimeter();
 					break;
-				case 2:sq.getter();
+				case 2:sq.get();
 					System.out.print("Area of square:");
 					sq.area();
 					System.out.print("Perimeter of square:");
 					sq.perimeter();
 					break;	
-				case 3:tri.getter();
+				case 3:tri.get();
 					System.out.print("Area of triangle:");
 					tri.area();
 					System.out.print("Perimeter of triangle:");
 					tri.perimeter();
 					break;
-				case 4:rect.getter();
+				case 4:rect.get();
 					System.out.print("Area of rectangle:");
 					rect.area();
 					System.out.print("Perimeter of rectangle:");
